@@ -1,0 +1,182 @@
+.col-1 {
+	width: 8.33%;
+}
+
+.col-2 {
+	width: 16.66%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-5 {
+	width: 41.66%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33%;
+}
+
+.col-8 {
+	width: 66.66%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33%;
+}
+
+.col-11 {
+	width: 91.66%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+[class*="col-"] {
+	float: left;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 12px;
+	color: #FFF !important;
+	height: 100vh;
+	width: 100vw;
+}
+
+#gradient {
+	background: radial-gradient(ellipse at 30% 50%, #93b9c9 0%, #1e698a 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93b9c9', endColorstr='#1e698a', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+}
+
+.node {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 12px;
+	cursor: pointer;
+	fill: white;
+}
+
+.node:hover {
+	fill: #FF3333;
+	font-size: 12px;
+}
+
+.link {
+	stroke: black;
+	stroke-opacity: 0.5;
+	fill: none;
+	pointer-events: none;
+}
+
+path.arc {
+	cursor: move;
+	fill: blue;
+	opacity: 0;
+}
+
+.link {
+	fill: none;
+	stroke: #FF3333;
+	stroke-opacity: .4;
+	pointer-events: none;
+}
+
+.link.source,
+.link.target {
+	stroke-opacity: 1;
+	stroke-width: 2px;
+}
+
+.node.target {
+	fill: #FF3333;
+}
+
+.link.source {
+	stroke: #FF3333;
+}
+
+.node.source {
+	fill: #FF3333;
+}
+
+.link.target {
+	stroke: #FF3333;
+}
+
+
+/* MONATE*/
+
+#node.Januar {
+	color: green;
+}
+
+
+/* Bilder */
+
+a:hover:after {
+	content: url(/img/tea.png);
+	/* no need for qoutes */
+	display: block;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 200px;
+	/* change this value to one that suits you */
+	top: 200px;
+	/* change this value to one that suits you */
+}
+
+/* Infobutton */
+
+.info { 
+	right: 20px;
+	bottom: 20px;
+    background-color: #FF3333 ;
+    position: absolute;
+    text-align: center;
+    width: 3%;
+	border-radius: 100px;
+  }
+
+  .info:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .inhalt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    font-size: 3em;
+    padding-top: 15%;
+  }
+
+
