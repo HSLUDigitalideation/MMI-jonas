@@ -1,15 +1,23 @@
 [
-{"name": "umsatz.< 1 CHF", "imports": []},
-{"name": "umsatz.1 – 4 CHF", "imports": []},
-{"name": "umsatz.> 4", "imports": []},
+{"name": "umsatz.< 1 CHF", "imports": ["flare.produkt.MClass Choco-Drink",
+"flare.produkt.Ruchbrot 250g",
+"flare.produkt.Lime",
+"flare.produkt.MClass Jog Caramel",
+"flare.produkt.Ice Tea Zitrone 50cl"]},
+{"name": "umsatz.1 – 4 CHF", "imports": ["flare.produkt.Twix 50g","flare.produkt.Frischback Pita","flare.produkt.Le Gruyère 120g","flare.produkt.Jumpy's Paprika","flare.produkt.Kinder Überraschung","flare.produkt.Kuchenglasur hell","flare.produkt.Ruchbrot 1kg","flare.produkt.Kartoffeln mehligkochend","flare.produkt.Noxana 100g","flare.produkt.Valflora Halbrahm UHT","flare.produkt.MClass Wiener Waffel","flare.produkt.Erdbeeren","flare.produkt.MBudget Blätterteig","flare.produkt.MClass Penne","flare.produkt.Butter Laugenbrezel"]},
+{"name": "umsatz.> 4", "imports": ["flare.produkt.Quiche Lorraine","flare.produkt.Wassermelone mini","flare.produkt.MBudget Cervelas","flare.produkt.Philadelphia Kräuter","flare.produkt.Bio Peperoni","flare.produkt.Tortilla Chips Chili"]},
 
 {"name": "zeit.Arbeit", "imports": []},
 {"name": "zeit.Zivildienst", "imports": []},
 {"name": "zeit.Studium", "imports": []},
 	
-{"name": "betrag.eins gekauft", "imports": []},
-{"name": "betrag.zwei bis drei", "imports": []},
-{"name": "betrag.mehr als drei", "imports": []},
+{"name": "betrag.eins gekauft", "imports": ["flare.produkt.Quiche Lorraine","flare.produkt.Twix 50g","flare.produkt.Wassermelone mini","flare.produkt.Frischback Pita","flare.produkt.Le Gruyère 120g","flare.produkt.MBudget Cervelas","flare.produkt.MClass Choco-Drink","flare.produkt.Philadelphia Kräuter","flare.produkt.Jumpy's Paprika","flare.produkt.Kinder Überraschung"]},
+	
+{"name": "betrag.zwei bis drei", "imports": ["flare.produkt.Bio Peperoni","flare.produkt.Kuchenglasur hell","flare.produkt.Ruchbrot 1kg","flare.produkt.Tortilla Chips Chili","flare.produkt.Kartoffeln mehligkochend","flare.produkt.Noxana 100g","flare.produkt.Ruchbrot 250g","flare.produkt.Valflora Halbrahm UHT","flare.produkt.MClass Wiener Waffel","flare.produkt.Erdbeeren","flare.produkt.MBudget Blätterteig","flare.produkt.MClass Penne"]},
+											 
+{"name": "betrag.mehr als drei", "imports": ["flare.produkt.MClass Jog Caramel","flare.produkt.Lime",
+"flare.produkt.Butter Laugenbrezel",
+"flare.produkt.Ice Tea Zitrone 50cl"]},
 	
 {"name": "monat.Januar", "imports": []},
 {"name": "monat.Februar", "imports": []},
@@ -20,8 +28,8 @@
 {"name": "monat.Juli", "imports": []},
 {"name": "monat.August", "imports": []},
 {"name": "monat.September", "imports": []},
-{"name": "monat.Oktober", "imports": []},
-{"name": "monat.November", "imports": []},
+{"name": "monat.Oktober", "imports": ["flare.produkt.Lime"]},
+{"name": "monat.November", "imports": ["flare.produkt.Bio Peperoni"]},
 {"name": "monat.Dezember", "imports": ["flare.produkt.Frischback Pita","flare.produkt.Bio Peperoni"]},
 
 {"name": "flare.produkt.Bio Peperoni", "imports": ["monat.Dezember","monat.November"]},
@@ -34,7 +42,7 @@
 {"name": "flare.produkt.Kinder Überraschung", "imports": []},
 {"name": "flare.produkt.Kuchenglasur hell", "imports": []},
 {"name": "flare.produkt.Le Gruyère 120g", "imports": []},
-{"name": "flare.produkt.Lime", "imports": []},
+{"name": "flare.produkt.Lime", "imports": ["monat.Oktober"]},
 {"name": "flare.produkt.MBudget Blätterteig", "imports": []},
 {"name": "flare.produkt.MBudget Cervelas", "imports": []},
 {"name": "flare.produkt.MClass Choco-Drink", "imports": []},

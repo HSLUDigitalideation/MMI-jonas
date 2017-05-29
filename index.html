@@ -34,8 +34,8 @@
 
 		var cluster = d3.layout.cluster()
 			.size([360, ry - 160])
-			.sort(function(a, b) {
-				return d3.ascending(a.key, b.key);
+			.sort(function(c, d) {
+				return d3.ascending(c.key, d.key);
 			});
 
 		var bundle = d3.layout.bundle();

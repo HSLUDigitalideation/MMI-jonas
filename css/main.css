@@ -102,7 +102,7 @@ path.arc {
 
 .link {
 	fill: none;
-	stroke: #FF3333;
+	stroke: white;
 	stroke-opacity: .4;
 	pointer-events: none;
 }
