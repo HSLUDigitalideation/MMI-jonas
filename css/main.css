@@ -132,25 +132,39 @@ path.arc {
 
 /* MONATE*/
 
-#node.Januar {
-	color: green;
+#node-Dezember, #node-Januar, #node-Februar {
+	fill: #311B92;
+}
+#node-März, #node-April, #node-Mai {
+	fill: #5E35B1;
+}
+#node-Juni, #node-Juli, #node-August {
+	fill: #7E57C2;
+}
+#node-September, #node-Oktober, #node-November {
+	fill: #E1BEE7;
+}
+
+#node-Dezember:hover, #node-Januar:hover, #node-Februar:hover,
+#node-März:hover, #node-April:hover, #node-Mai:hover,
+#node-Juni:hover, #node-Juli:hover, #node-August:hover,
+#node-September:hover, #node-Oktober:hover, #node-November:hover {
+	fill: #FF3333;
 }
 
 
-/* Bilder */
+/* Bilder 
 
 a:hover:after {
 	content: url(/img/tea.png);
-	/* no need for qoutes */
 	display: block;
 	position: absolute;
 	height: 50px;
 	width: 50px;
 	left: 200px;
-	/* change this value to one that suits you */
 	top: 200px;
-	/* change this value to one that suits you */
 }
+*/
 
 /* Infobutton */
 

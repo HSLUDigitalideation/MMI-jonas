@@ -1,4 +1,7 @@
 [
+{"name": "umsatz.< 1 CHF", "imports": []},
+{"name": "umsatz.1 – 4 CHF", "imports": []},
+{"name": "umsatz.> 4", "imports": []},
 
 {"name": "zeit.Arbeit", "imports": []},
 {"name": "zeit.Zivildienst", "imports": []},
@@ -9,7 +12,7 @@
 {"name": "betrag.mehr als drei", "imports": []},
 	
 {"name": "monat.Januar", "imports": []},
-{"name": "monat.Feburar", "imports": []},
+{"name": "monat.Februar", "imports": []},
 {"name": "monat.März", "imports": []},
 {"name": "monat.April", "imports": []},
 {"name": "monat.Mai", "imports": []},
@@ -19,9 +22,9 @@
 {"name": "monat.September", "imports": []},
 {"name": "monat.Oktober", "imports": []},
 {"name": "monat.November", "imports": []},
-{"name": "monat.Dezember", "imports": ["flare.produkt.Bio Peperoni"]},
+{"name": "monat.Dezember", "imports": ["flare.produkt.Frischback Pita","flare.produkt.Bio Peperoni"]},
 
-{"name": "flare.produkt.Bio Peperoni", "imports": []},
+{"name": "flare.produkt.Bio Peperoni", "imports": ["monat.Dezember","monat.November"]},
 {"name": "flare.produkt.Butter Laugenbrezel", "imports": []},
 {"name": "flare.produkt.Erdbeeren", "imports": []},
 {"name": "flare.produkt.Frischback Pita", "imports": []},
@@ -32,8 +35,8 @@
 {"name": "flare.produkt.Kuchenglasur hell", "imports": []},
 {"name": "flare.produkt.Le Gruyère 120g", "imports": []},
 {"name": "flare.produkt.Lime", "imports": []},
-{"name": "flare.produkt.MBud Blätterteig", "imports": []},
-{"name": "flare.produkt.MBud Cervelas", "imports": []},
+{"name": "flare.produkt.MBudget Blätterteig", "imports": []},
+{"name": "flare.produkt.MBudget Cervelas", "imports": []},
 {"name": "flare.produkt.MClass Choco-Drink", "imports": []},
 {"name": "flare.produkt.MClass Jog Caramel", "imports": []},
 {"name": "flare.produkt.MClass Penne", "imports": []},
