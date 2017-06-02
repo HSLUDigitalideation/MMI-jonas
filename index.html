@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	      <title>Cumulus 2.0</title>
+
+<head>
+	<title>Cumulus 2.0</title>
 
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
@@ -11,17 +12,21 @@
 
 
 	<script src="d3.js">
+
+
 	</script>
 	<script src="./d3.layout.js"></script>
 	<script src="./packages.js"></script>
+	<script src="./js/jquery.min.js" type="text/javascript"></script>
+	<script src="./js/main.js" type="text/javascript"></script>
 
 </head>
 
 <body id="gradient">
-	<!--
-	  <div style="position:absolute;bottom:0;font-size:18px;">tension: <input style="position:relative;top:3px;" type="range" min="0" max="100" value="85"></div>
- -->
-<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<div id="banner"></div> 
+	
+	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script type="text/javascript">
 		var w = 900,
 			h = 900,
@@ -34,9 +39,9 @@
 
 		var cluster = d3.layout.cluster()
 			.size([360, ry - 160])
-			.sort(function(c, d) {
-				return d3.ascending(c.key, d.key);
-			});
+		//.sort(function(c, d) {
+		//	return d3.ascending(c.key, d.key);
+			//});
 
 		var bundle = d3.layout.bundle();
 
@@ -52,7 +57,7 @@
 
 		// Chrome 15 bug: <http://code.google.com/p/chromium/issues/detail?id=98951>
 		var div = d3.select("body").insert("div", "h2")
-			.style("top", "+40px")
+			.style("top", "+30px")
 			.style("left", "+50px")
 			.style("width", w + "px")
 			.style("height", w + "px")
@@ -65,9 +70,13 @@
 			.append("svg:g")
 			.attr("transform", "translate(" + rx + "," + ry + ")");
 
+		var month = ['Januar','Februar','März', "April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+		
+
+		
 		svg.append("svg:path")
 			.attr("class", "arc")
-			.attr("d", d3.svg.arc().outerRadius(ry - 120).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
+			.attr("d", d3.svg.arc().outerRadius(ry - 160).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
 			.on("mousedown", mousedown);
 
 		d3.json("test.json", function(classes) {
@@ -204,12 +213,308 @@
 		function dot(a, b) {
 			return a[0] * b[0] + a[1] * b[1];
 		}
+
 	</script>
+
+	<div class="titel">
+		<h3>CUMULUS 2.0</h3>
+		<div class="regler">
+			<h2>SPANNUNG</h2><br> <input style="top:1px;" type="range" min="0" max="100" value="70">
+		</div>
+	</div>
+
+
 
 	<div class="info">
 		<div class="inhalt">
-			<h3>I</h3>
+			<h4>I</h4>
 		</div>
 	</div>
+
+	<div id="hide" class="block">
+		<div class="bilder">
+			<h1>«Cumulus 2.0»</h1>
+			<h5>Hallo und herzlich Wilkommen zum Projekt «Cumulus 2.0»! Ich habe mich in den letzten vier Wochen intensiv mit meinen digitalen Daten welche ich im Internet, Clouds und sonstwo hinterlassen habe, befasst.<br> <br>Im Zusammenhang mit IDA Modul der Hochschule Luzern, «Digital Design - Re-thinking the Web Standards», ist dieses Projekt entsanden. Ich habe dabei meine Migros Cumulus Daten ausgewertet und mit persönlichen «Statements» versehen.Es geht mir dabei um meinen Konsum und was man aus diesen Daten herauslesen kann in der Verbindung zwischen Lebensabschnitt, Preis, Zeit, Produkte und der Anzahl gekaufter Produkte.<br><br></h5>
+			<h6>Daten: https://www.migros.ch/de/cumulus.html</h6>
+			<h6>Bildquellen: https://www.migros.ch/de/einkaufen.html</h6>
+			<h6>© Hochschule Luzern, Design & Kunst, Digital Ideation, Jonas Wiederkehr</h6>
+			<h6>jonas.wiederkehr@stud.hslu.ch</h6>
+		</div>
+	</div>
+
+	<div id="eins" class="blockklein">
+		<div class="bilder">
+			<h1>Einmal gekauft</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	<div id="zwei" class="blockklein">
+		<div class="bilder">
+			<h1>Zwei bis dreimal erstanden</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	<div id="drei" class="blockklein">
+		<div class="bilder">
+			<h1>Mehr als dreimal gekauft</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	
+	<div id="stud" class="blockklein">
+		<div class="bilder">
+			<h1>Studium</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	<div id="1CHF" class="blockklein">
+		<div class="bilder">
+			<h1>>1 CHF</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	<div id="2CHF" class="blockklein">
+		<div class="bilder">
+			<h1>1 – 4 CHF</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	<div id="3CHF" class="blockklein">
+		<div class="bilder">
+			<h1><4 CHF</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	
+	<div id="stud" class="blockklein">
+		<div class="bilder">
+			<h1>Studium</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	<div id="arb" class="blockklein">
+		<div class="bilder">
+			<h1>Arbeit</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+	<div id="zivi" class="blockklein">
+		<div class="bilder">
+			<h1>Zivildienst</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	
+
+	<div id="pr1" class="block">
+		<div class="bilder"><img src="img/bio-peperoni.jpg">
+			<h1>Bio Peperoni</h1>
+			<p>Gibt es etwas besseres als im Sommer nach einem langen Arbeitstag zu grillieren? Diese Peperoni eignen sich super als Beilage zum Fleisch oder Wurst, würd ja sagen tsch.. tsch.. aber das währe wohl das falsche Unternehmen.</p>
+		</div>
+	</div>
+	<div id="pr2" class="block">
+		<div class="bilder"><img src="img/annas-best-laugenbrezel-mit-butter-1.jpg">
+
+			<h1>Butter Laugenbrezel</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr3" class="block">
+		<div class="bilder"><img src="img/erdbeeren.jpg">
+
+			<h1>Erdbeeren</h1>
+			<p>Die Erdbeere stammt aus der Familie der Rosengewächse und ist keine Beere sondern eine Sammelnussfrucht... gekauft habe ich sie wiederum im Sommer und zwar einmal. </p>
+
+		</div>
+	</div>
+	<div id="pr4" class="block">
+		<div class="bilder"><img src="img/pita-frischback-ungekuehlt.jpg">
+
+			<h1>Pita</h1>
+			<p>Weisst du eigentlich was die liebe Migros so für Daten von dir Sammelt? Ich kann dir von dieser aufback Pita auf die Sekunde genau sagen wann ich sie gekauft habe. Um 18:20 Uhr und 55 Sekunden. Ausserdem war die Kassenbeschreibung 306 und die Transaktionsnummer 9922, dann natürlich die Menge (1) und ob es Aktion war oder nicht. Weiter der Standort (M Schaffhauserplatz, Zürich) und der Preis. Dies alles für JEDES Produkt welches du jemals gekauft hast, vorausgesetzt du hast deine Cumuluskarte gezückt.</p>
+
+		</div>
+	</div>
+	<div id="pr5" class="block">
+		<div class="bilder"><img src="img/kult-ice-tea-zitrone.jpg">
+
+			<h1>ICE TEA</h1>
+			<p>Gibt es etwas besseres als dieses Getränk? JA es gibt ihn in 5 Liter Packungen! Dies ist mein persönlicher Bestseller. Sagenhafte 31 mal hab ich diesen gekauft, auch in anderen Grössen, vom halben über 2 bis eben zum 5 Liter Beutel.  Gesamthaft sind es nun über 29.5 Liter! Schäm ich mich dafür? NIEMALS.</p>
+
+		</div>
+	</div>
+	<div id="pr6" class="block">
+		<div class="bilder"><img src="img/jumpys-paprika.jpg">
+
+			<h1>Jumpy's Paprika</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr7" class="block">
+		<div class="bilder"><img src="img/kartoffeln-mehligkochend.jpg">
+
+			<h1>Kartoffeln</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr8" class="block">
+		<div class="bilder"><img src="img/kinder-ueberraschung.jpg">
+
+			<h1>Kinder Überraschung</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr9" class="block">
+		<div class="bilder"><img src="img/patissier-kuchenglasur-hell.jpg">
+
+			<h1>Kuchenglasur</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr10" class="block">
+		<div class="bilder"><img src="img/le-gruyere-rezent.jpg">
+
+			<h1>Gruyère</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr11" class="block">
+		<div class="bilder"><img src="img/limes.jpg">
+
+			<h1>Limes</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr12" class="block">
+		<div class="bilder"><img src="img/m-budget-blaetterteig-ausgewallt.jpg">
+
+			<h1>Blätterteig</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr13" class="block">
+		<div class="bilder"><img src="img/m-budget-cervelas.jpg">
+
+			<h1>Cervelas</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr14" class="block">
+		<div class="bilder"><img src="img/m-classic-choco-drink.jpg">
+
+			<h1>Choco Drink</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr15" class="block">
+		<div class="bilder"><img src="img/m-classic-joghurt-caramel-stichfest.jpg">
+
+			<h1>Caramel Joghurt</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr16" class="block">
+		<div class="bilder"><img src="img/m-classic-penne.jpg">
+
+			<h1>Penne</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr17" class="block">
+		<div class="bilder"><img src="img/m-classic-wiener-waffel.jpg">
+
+			<h1>Wiener Waffeln</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr18" class="block">
+		<div class="bilder"><img src="img/noxana.jpg">
+
+			<h1>Noxana</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr19" class="block">
+		<div class="bilder"><img src="img/philadelphia-kraeuter.jpg">
+
+			<h1>Philadelphia Kräuter</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr20" class="block">
+		<div class="bilder"><img src="img/quiche-lorraine.jpg">
+
+			<h1>Quiche Lorraine</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr21" class="block">
+		<div class="bilder"><img src="img/ruchbrot.jpg">
+
+			<h1>Ruchbrot</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr22" class="block">
+		<div class="bilder"><img src="img/pancho-villa-tortilla-chips-chili.jpg">
+
+			<h1>Tortilla Chips Chili</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr23" class="block">
+		<div class="bilder"><img src="img/twix.jpg">
+
+			<h1>Twix</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr24" class="block">
+		<div class="bilder"><img src="img/valflora-halbrahm-uht.jpg">
+
+			<h1>Valflora Halbrahm</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+	<div id="pr25" class="block">
+		<div class="bilder"><img src="img/wassermelone-mini.jpg">
+
+			<h1>Wassermelone mini</h1>
+			<p>Ganz klar ein Winterprodukt für mich(sagt zumindest Cumulus, am meisten hab ich diese Brezel während meiner Arbeitszeit, nämlich 6 mal, konsumiert.</p>
+
+		</div>
+	</div>
+
 </body>
+
+
 </html>
